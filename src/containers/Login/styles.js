@@ -55,7 +55,7 @@ export const Img__Container = styled.div`
     transform: translateX(-50%);
     animation: pulse 3s infinite alternate;
     .code__byte{
-      color: var(--tertiary-color);
+      color: var(--quinary-color);
     }
     
     
@@ -108,7 +108,7 @@ export const Form = styled.form`
 `;
 
 export const Input__Container = styled.div`
-margin: 15px 0;
+margin: 1rem 0;
 label {
     margin-bottom: 5px;
     font-weight: bold;
@@ -117,29 +117,20 @@ label {
   input{
     padding: 9px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 10px;
     text-decoration: none;
+  }
+  p{
+    font-size: 10px;
+    color: var(--sextary-color);
+    height: 10px; /* altura fixa */
+    margin: 0; /* remover margem */
+    
     
   }
 
 `;
-
-export const Button__logar = styled.button`
-margin-top: 5px;
-  padding: 10px 10px;
-  border: none;
-  background-color: var(--quinary-color);
-  color: white;
-  border-radius: 5px;
-  
-  
-  &:hover {
-    background-color: var(--tertiary-color);
-    color:var(--secondary-color);
-    font-weight: bold;
-  }
-  `;
 
 export const H3 = styled.h3`
   font-size: 1em;
@@ -155,5 +146,6 @@ export const H3 = styled.h3`
   }
   .click__here{
     color: var(--sextary-color);
+    cursor: pointer;
   }
 `;

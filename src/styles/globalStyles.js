@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css' ;
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -32,6 +33,9 @@ const GlobalStyles = createGlobalStyle`
         font-family: "Anton", sans-serif;
         font-weight: 400;
         font-style: normal;
+    }
+    a ,button {
+        cursor: pointer;
     }
 
     h3 {
