@@ -3,7 +3,8 @@ import { yupResolver } from "@hookform/resolvers/yup"//importando metodo de vali
 import * as yup from "yup"// importando o Yup
 import { api } from "../../services/api" //importando o serviço de api
 import { toast } from "react-toastify"// importando a biblioteca react-toastify
-
+import { useNavigate } from "react-router-dom"// importando o hook de navegação
+ 
 
 
 import React from 'react';
@@ -15,6 +16,7 @@ import {
   Input__Container,
   H3,
   Form,
+  Link
 } from './styles';
 import Logo from './img_login/hamburger.svg';
 import Logo__1 from './img_login/folhas.svg';
@@ -22,6 +24,7 @@ import Logo__2 from './img_login/background.svg';
 import { Button } from '../../components/ButtonGlobal';
 
 export function Login() {
+  const navigate = useNavigate();
   const schema = yup
     .object({
       email: yup
@@ -52,7 +55,14 @@ export function Login() {
         }),
         {
           pending: "Fazendo login...",
-          success: "🚀Login realizado com sucesso!",
+          success: {
+            render() {
+              setTimeout(() => {
+                navigate("/");
+              }, 2000);
+              return `Login realizado com sucesso!`;
+            },
+          },
           error: "🤯Erro ao realizar login. Verifique suas credenciais.",
         }
       );
@@ -97,7 +107,7 @@ export function Login() {
           <H3 className='recovery'>Esqueçi minha <a className='click__here'>senha.</a></H3>
           <Button type="submit">Logar</Button>
         </Form>
-        <H3>Não possui conta? <a className='click__here'>Clique aqui</a></H3>
+        <H3>Não possui conta? <Link  to="/cadastro" >Clique aqui</Link></H3>
       </Login__Container>
     </Container>
   );

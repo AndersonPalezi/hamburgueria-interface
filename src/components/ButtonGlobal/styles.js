@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerButton = styled.button`
     font-family: "Anton", sans-serif;
-    width: 33%;
+    width: 15rem;
     height: 35px;
     border: 0;
     border-radius: 10px;

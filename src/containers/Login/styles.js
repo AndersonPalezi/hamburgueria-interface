@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as ReactLink } from "react-router-dom";
 
 export const Login__Container = styled.div`
   display: flex;
@@ -144,8 +145,9 @@ export const H3 = styled.h3`
     font-size: 0.5em;
     color: var(--tertiary-color);
   }
-  .click__here{
-    color: var(--sextary-color);
-    cursor: pointer;
-  }
+`;
+export const Link = styled(ReactLink)`
+  color: var(--sextary-color);
+  cursor: pointer;
+  text-decoration: none;
 `;
