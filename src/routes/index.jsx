@@ -1,7 +1,9 @@
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import {Login} from "../containers/Login/index"
 import { Register } from "../containers/Register";
-import { Home} from "../containers/Home/index.jsx"
+import { Home }  from "../containers/Home/index.jsx"
+
 
 export const router = createBrowserRouter ([
     {
@@ -19,6 +21,5 @@ export const router = createBrowserRouter ([
         element: <Register />,
 
     },
-    
     
 ]);

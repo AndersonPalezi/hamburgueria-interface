@@ -1,7 +1,11 @@
+// src/containers/Products/styles.js
+
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  // suas estilizações aqui
+`;
 
-export const ProductsImg = styled.img`
-width: 100%;
+export const HomeImg = styled.img`
+  // suas estilizações aqui
 `;

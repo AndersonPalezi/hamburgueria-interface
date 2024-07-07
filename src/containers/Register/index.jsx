@@ -11,7 +11,7 @@ import {
     Container,
     Img__Container,
     Login__Container,
-    H1, P,
+    H1,
     Input__Container,
     H3,
     Form,
@@ -117,7 +117,7 @@ export function Register() {
 
                     <Button type="submit">Logar</Button>
                 </Form>
-                <H3>Não possui conta? <Link to="/login">Clique aqui</Link></H3>
+                <H3>Ja possui uma conta? <Link to="/login">Clique aqui</Link></H3>
             </Login__Container>
         </Container>
     );
