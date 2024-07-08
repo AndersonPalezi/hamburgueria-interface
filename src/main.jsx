@@ -10,6 +10,7 @@ import { router } from "./routes"
 import { UserProvider } from './hooks/UserContext';
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider>
